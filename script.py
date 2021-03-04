@@ -1,23 +1,10 @@
 from random import shuffle
+from helperFunctions import getMin, getMax
 initialList = [x for x in range(10)]
 shuffle(initialList)
 
 print("Initial randomized list: %s"%initialList)
 output = []
-
-def getMin(inputList):
-    currentMin = inputList[0]
-    for i in range(len(inputList)-1):
-        if inputList[i + 1] < currentMin:
-            currentMin = inputList[i + 1]
-    return currentMin
-
-def getMax(inputList):
-    currentMax = inputList[0]
-    for i in range(len(inputList) - 1):
-        if inputList[i + 1] > currentMax:
-            currentMax = inputList[i + 1]
-    return currentMax
 
 while True:
     print("How do you want to sort the randomized list?")
