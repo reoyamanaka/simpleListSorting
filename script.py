@@ -24,19 +24,26 @@ print("How do you want to sort the randomized list?")
 print("1. Increasing")
 print("2. Decreasing")
 sortingOption = input()
+currentMin = getMin(initialList)
+currentMax = getMax(initialList)
+counter = 0
 if sortingOption == "1":
-    currentMin = getMin(initialList)
-    currentMax = getMax(initialList)
-    counter = 0
-
     while counter < len(initialList):
         for i in initialList:
             if i == currentMin:
                 output.append(i)
                 counter += 1
         currentMin += 1
-
-print("The sorted list, from smallest to greatest: %s"%output)
+    print("The sorted list, from smallest to greatest: %s"%output)
+elif sortingOption == "2":
+    while counter < len(initialList):
+        for i in initialList:
+            if i == currentMax:
+                output.append(i)
+                counter += 1
+        currentMax -= 1
+    print("The sorted list, from greatest to smallest: %s"%output)
+    
 
             
         
