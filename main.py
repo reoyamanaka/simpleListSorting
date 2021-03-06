@@ -1,5 +1,6 @@
 from random import shuffle
 from helperFunctions import getMin, getMax
+from bubbleSort import bubbleSort
 initialList = [x for x in range(10)]
 shuffle(initialList)
 
@@ -34,6 +35,19 @@ while True:
         break
     else:
         print("\nInvalid entry. Choose either 1 or 2.\n")
+
+print("\nLet's try another method for sorting. Choose from the list below:")
+print("1. Bubble Sort")
+sortType = input()
+print("Re-randomizing list...")
+shuffle(initialList)
+
+if sortType == "1":
+    bubbleSort(initialList)
+    
+    
+    
+    
 
         
     
