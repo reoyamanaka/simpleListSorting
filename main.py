@@ -15,6 +15,7 @@ while True:
     currentMin = getMin(initialList)
     currentMax = getMax(initialList)
     counter = 0
+    
     if sortingOption == "1":
         while counter < len(initialList):
             for i in initialList:
@@ -41,9 +42,17 @@ print("1. Bubble Sort")
 sortType = input()
 print("Re-randomizing list...")
 shuffle(initialList)
+print(initialList)
 
 if sortType == "1":
-    bubbleSort(initialList)
+    while True:
+        print("Choose how you want to sort:")
+        print("1. Ascending")
+        print("2. Descending")
+        sortDirection = input()
+        if sortDirection == "1":
+            print(bubbleSort(initialList))
+            break
     
     
     
