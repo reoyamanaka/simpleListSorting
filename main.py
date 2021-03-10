@@ -53,6 +53,10 @@ if sortType == "1":
         if sortDirection == "1":
             print(bubbleSort(initialList))
             break
+        elif sortDirection == "2":
+            print(bubbleSort(initialList, desc=True))
+            break
+            
     
     
     
