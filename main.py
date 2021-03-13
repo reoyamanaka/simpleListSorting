@@ -4,6 +4,12 @@ from bubbleSort import bubbleSort
 initialList = [x for x in range(10)]
 shuffle(initialList)
 
+def reshuffleAndShow(inputList):
+    print("\nRe-randomizing list...")
+    shuffle(inputList)
+    print(inputList)
+    print()
+
 print("Initial randomized list: %s"%initialList)
 output = []
 
@@ -37,25 +43,25 @@ while True:
     else:
         print("\nInvalid entry. Choose either 1 or 2.\n")
 
-print("\nLet's try another method for sorting. Choose from the list below:")
-print("1. Bubble Sort")
-sortType = input()
-print("Re-randomizing list...")
-shuffle(initialList)
-print(initialList)
-
-if sortType == "1":
-    while True:
-        print("Choose how you want to sort:")
-        print("1. Ascending")
-        print("2. Descending")
-        sortDirection = input()
-        if sortDirection == "1":
-            print(bubbleSort(initialList))
-            break
-        elif sortDirection == "2":
-            print(bubbleSort(initialList, desc=True))
-            break
+while True:
+    print("\nLet's try another method for sorting. Choose from the list below:")
+    print("1. Bubble Sort")
+    sortType = input()
+    if sortType == "1":
+        reshuffleAndShow(initialList)
+        while True:
+            print("Choose how you want to sort:")
+            print("1. Ascending")
+            print("2. Descending")
+            sortDirection = input()
+            if sortDirection == "1":
+                print(bubbleSort(initialList))
+                break
+            elif sortDirection == "2":
+                print(bubbleSort(initialList, desc=True))
+                break
+    else:
+        print("\nInvalid entry. Choose either 1 or 2.\n")
             
     
     
