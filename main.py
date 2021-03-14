@@ -60,6 +60,9 @@ while True:
             elif sortDirection == "2":
                 print(bubbleSort(initialList, desc=True))
                 break
+            else:
+                print("\nInvalid entry. Choose either 1 or 2.\n")
+                
     else:
         print("\nInvalid entry. Choose either 1 or 2.\n")
             
