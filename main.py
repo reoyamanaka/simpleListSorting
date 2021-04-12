@@ -1,6 +1,8 @@
 from random import shuffle
 from helperFunctions import getMin, getMax
 from bubbleSort import bubbleSort
+from insertionSort import insertionSort
+
 initialList = [x for x in range(10)]
 shuffle(initialList)
 
@@ -43,9 +45,11 @@ while True:
     else:
         print("\nInvalid entry. Choose either 1 or 2.\n")
 
-while True:
+followUp = True
+while followUp:
     print("\nLet's try another method for sorting. Choose from the list below:")
     print("1. Bubble Sort")
+    print("2. Insertion Sort")
     sortType = input()
     if sortType == "1":
         reshuffleAndShow(initialList)
@@ -56,13 +60,29 @@ while True:
             sortDirection = input()
             if sortDirection == "1":
                 print(bubbleSort(initialList))
+                followUp = False
                 break
             elif sortDirection == "2":
+                followUp = False
                 print(bubbleSort(initialList, desc=True))
                 break
             else:
                 print("\nInvalid entry. Choose either 1 or 2.\n")
-                
+    elif sortType == "2":
+        reshuffleAndShow(initialList)
+        while True:
+            print("Choose how you want to sort:")
+            print("1. Ascending")
+            print("2. Descending")
+            sortDirection = input()
+            if sortDirection == "1":
+                print(insertionSort(initialList))
+                followUp = False
+                break
+            elif sortDirection == "2":
+                print(insertionSort(initialList, desc = True))
+                followUp = False
+                break
     else:
         print("\nInvalid entry. Choose either 1 or 2.\n")
             
