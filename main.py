@@ -50,6 +50,7 @@ while followUp:
     print("\nLet's try another method for sorting. Choose from the list below:")
     print("1. Bubble Sort")
     print("2. Insertion Sort")
+    print("3. Selection Sort")
     sortType = input()
     if sortType == "1":
         reshuffleAndShow(initialList)
@@ -83,6 +84,15 @@ while followUp:
                 print(insertionSort(initialList, desc = True))
                 followUp = False
                 break
+    elif sortType == "3":
+        reshuffleAndShow(initialList)
+        while True:
+            print("Choose how you want to sort:")
+            print("1. Ascending")
+            print("2. Descending")
+            sortDirection=input()
+            if sortDirection == "1":
+
     else:
         print("\nInvalid entry. Choose either 1 or 2.\n")
             
