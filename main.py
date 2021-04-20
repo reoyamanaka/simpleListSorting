@@ -92,6 +92,7 @@ while followUp:
             print("2. Descending")
             sortDirection=input()
             if sortDirection == "1":
+                
 
     else:
         print("\nInvalid entry. Choose either 1 or 2.\n")
