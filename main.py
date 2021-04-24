@@ -2,6 +2,7 @@ from random import shuffle
 from helperFunctions import getMin, getMax
 from bubbleSort import bubbleSort
 from insertionSort import insertionSort
+from selectionSort import selectionSort
 
 initialList = [x for x in range(10)]
 shuffle(initialList)
@@ -92,7 +93,13 @@ while followUp:
             print("2. Descending")
             sortDirection=input()
             if sortDirection == "1":
-                
+                print(selectionSort(initialList))
+                followUp = False
+                break
+            elif sortDirection == "2":
+                print(selectionSort(initialList, desc = True))
+                followUp = False
+                break
 
     else:
         print("\nInvalid entry. Choose either 1 or 2.\n")

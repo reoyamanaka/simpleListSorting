@@ -1,5 +1,5 @@
-def selectionSort(elements, reverse = False):
-    if not reverse:
+def selectionSort(elements, desc = False):
+    if not desc:
         for i in range(len(elements) - 1):
             minIndex = i
             for j in range(minIndex + 1, len(elements)):
@@ -21,16 +21,4 @@ def selectionSort(elements, reverse = False):
                 elements[i] = elements[minIndex]
                 elements[minIndex] = temp
 
-from random import shuffle
-a = []
-for i in range(10):
-    a.append(i)
-
-shuffle(a)
-print(a)
-selectionSort(a)
-print(a)
-selectionSort(a, reverse = True)
-print(a)
-
-
+    return elements
