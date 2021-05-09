@@ -90,13 +90,14 @@ To get a local copy up and running follow these simple steps.
    ```sh
    git clone https://github.com/reoyamanaka/simpleListSorting.git
    ```
-2. Run main.py
-   ```sh
-   python3 main.py
-   ```
 
 <!-- USAGE -->
 ## Usage
+
+* To launch this program, run main.py
+   ```sh
+   python3 main.py
+   ```
 
 ### Initial sorting
 
