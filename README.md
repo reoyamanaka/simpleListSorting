@@ -59,7 +59,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-Upon launch,this program gives the user an option to sort a randomized list in either an ascending or a descending way using two lists. Then, the list is re-randomized and the user is given an option to sort the list again by using:
+Upon launch, this program gives the user an option to sort a randomized list in either ascending or descending order using two internal lists. Then, the list is re-randomized and the user is given an option to sort the list again by using:
 <ul>
   <li>Bubble sort</li>
   <li>Insertion sort</li>
